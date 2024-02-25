@@ -14,6 +14,7 @@ import lombok.*;
 @Setter
 public class TeamsRoom extends Room {
 
+    @NonNull
     @Column(name = "teams_code", length = 6, unique = true, nullable = false)
     private String teamsCode;
 

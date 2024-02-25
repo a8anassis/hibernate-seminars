@@ -17,17 +17,20 @@ import java.util.*;
 @Setter
 public class Teacher extends AbstractEntity {
 
+    @NonNull
     @Column(length = 10, unique = true, nullable = false)
     private String ssn;
 
+    @NonNull
     @Column(length = 50, nullable = false)
     private String firstname;
 
+    @NonNull
     @Column(length = 50, nullable = false)
     private String lastname;
 
     @OneToMany(mappedBy = "teacher")
-    @Getter(AccessLevel.PRIVATE)
+    @Getter(AccessLevel.PROTECTED)
     private Set<Seminar> seminars = new HashSet<>();
 
     public Set<Seminar> getAllSeminars() {

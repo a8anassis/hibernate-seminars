@@ -15,6 +15,7 @@ import java.util.*;
 @Setter
 public class Room extends AbstractEntity {
 
+    @NonNull
     @Column(unique = true, nullable = false)
     private String title;
 

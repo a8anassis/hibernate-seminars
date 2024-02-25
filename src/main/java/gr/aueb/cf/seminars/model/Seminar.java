@@ -14,6 +14,7 @@ import java.util.*;
 @Setter
 public class Seminar extends AbstractEntity {
 
+    @NonNull
     @Column(length = 256, nullable = false, unique = true)
     private String title;
 
